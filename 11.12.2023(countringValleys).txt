@@ -1,0 +1,19 @@
+##############7:23 AM 11-Dec-23#################
+Q1 ) 
+An avid hiker keeps meticulous records of their hikes. During the last hike that took exactly  steps, for every step it was noted if it was an uphill, , or a downhill,  step. Hikes always start and end at sea level, and each step up or down represents a  unit change in altitude. 
+
+ans : -     
+public static int countingValleys(int steps, string path)
+    {
+        int mountains = 0 , valleys=0;
+        for(int i = 0 ;i<steps;i+=1)
+        {
+            if(path[i]=='D' && mountains==0)
+                valleys+=1;
+            if(path[i]=='U')
+                mountains+=1;    
+            if(path[i]=='D')
+                mountains-=1;
+        }
+        return valleys;
+    }

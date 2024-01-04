@@ -1,0 +1,12 @@
+A Discrete Mathematics professor has a class of students. Frustrated with their lack of discipline, the professor decides to cancel class if fewer than some number of students are present when class starts. Arrival times go from on time () to arrived late ().    
+
+public static string angryProfessor(int k, List<int> a)
+    {
+         int count = 0;
+         foreach(int i in a){
+             if(i<=0)count++;
+         }
+         return count >=k?"NO":"YES";
+         
+         //return a.where(x=>x<=0).count()>=k?"NO":"YES";
+    }

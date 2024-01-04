@@ -1,0 +1,19 @@
+The Utopian Tree goes through 2 cycles of growth every year. Each spring, it doubles in height. Each summer, its height increases by 1 meter.
+
+A Utopian Tree sapling with a height of 1 meter is planted at the onset of spring. How tall will the tree be after  growth cycles?
+
+
+Program:-
+
+public static int utopianTree(int n)
+    {
+        int i = 0,h=1;
+        bool isSpring = true;
+        if(n==0) return 1;
+        while(i!=n){  
+            h = isSpring ? 2*h : h+1;
+            isSpring=!isSpring; 
+            i++;
+        }
+        return h;
+    }
