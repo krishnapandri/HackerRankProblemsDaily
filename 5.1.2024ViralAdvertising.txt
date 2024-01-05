@@ -1,0 +1,22 @@
+HackerLand Enterprise is adopting a new viral advertising strategy. When they launch a new product, they advertise it to exactly  people on social media.
+
+On the first day, half of those  people (i.e., ) like the advertisement and each shares it with  of their friends. At the beginning of the second day,  people receive the advertisement.
+
+Each day,  of the recipients like the advertisement and will share it with  friends on the following day. Assuming nobody receives the advertisement twice, determine how many people have liked the ad by the end of a given day, beginning with launch day as day .
+
+
+
+Ans : -
+    public static int viralAdvertising(int n)
+    {
+        int i = 1, shared = 5,liked=0,cumulativeLikes=0;
+        
+        while(i<=n){
+            
+            liked=(int)Math.Floor((decimal)shared/2);
+            cumulativeLikes+=liked;
+            shared=liked*3;
+            i++;
+        } 
+        return cumulativeLikes ;
+    }
