@@ -1,0 +1,20 @@
+https://www.hackerrank.com/challenges/circular-array-rotation/problem?isFullScreen=true
+John Watson knows of an operation called a right circular rotation on an array of integers. One rotation operation moves the last array element to the first position and shifts all remaining elements right one. To test Sherlock's abilities, Watson provides Sherlock with an array of integers. Sherlock is to perform the rotation operation a number of times then determine the value of the element at a given position.    
+
+
+public static List<int> 
+    circularArrayRotation(List<int> a, int k, List<int> queries)
+    {
+        List<int> newlist = new List<int>();
+        int arrayCount = a.Count;
+        for(int j = 0 ; j < arrayCount;j++){
+            newlist.Add(0);
+        }
+        k = k%arrayCount;
+        for(int i = 0 ;i<arrayCount;i++){
+            
+            int newIndex = (i+k)%arrayCount;
+            newlist[newIndex] = a[i];
+        }
+        return queries.Select(x=>newlist[x]).ToList();
+    }
