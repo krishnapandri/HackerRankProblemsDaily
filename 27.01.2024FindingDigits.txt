@@ -1,0 +1,21 @@
+An integer  is a divisor of an integer  if the remainder of . n/10 = 0 Given an integer, for each digit that makes up the integer determine whether it is a divisor. Count the number of divisors occurring within the integer.
+Check whether ,  and  are divisors of . All 3 numbers divide evenly into  so return .
+
+Example
+
+Ans:-
+public static int findDigits(int n)
+    {
+        int temp = 0,count = 0, num = n;
+        
+        while(num!=0){
+            temp = num%10;
+            num=num/10;
+            if(temp==0)continue;
+            if((n%temp)==0)
+            {
+              count++;       
+            }
+        }
+        return count;
+    }
