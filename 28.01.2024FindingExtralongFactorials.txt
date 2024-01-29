@@ -1,0 +1,20 @@
+Complete the extraLongFactorials function in the editor below. It should print the result and return.
+
+extraLongFactorials has the following parameter(s):
+n: an integer
+
+Ans :-
+
+public static void extraLongFactorials(int n)
+    {
+        
+        Console.WriteLine(CountFactorial(n));
+        
+    }
+    
+    public static BigInteger CountFactorial(int n){
+        if(n==0){
+            return 1;
+        }
+        return n * CountFactorial(n-1);
+    }
